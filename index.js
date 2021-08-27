@@ -18,6 +18,9 @@ app.use(
 );
 app.use(bodyParser.json());
 
+app.get('/hello', async function (req, res) {
+        res.send("Hello Working Successfully")
+});
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
     const { videourl } = req.body

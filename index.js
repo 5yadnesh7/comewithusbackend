@@ -6,6 +6,7 @@ var express = require('express');
 var app = express();
 var cors = require('cors');
 var bodyParser = require('body-parser');
+const myinsta = require('insta_downloader');
 
 const PORT = process.env.PORT || 2121
 
@@ -21,6 +22,11 @@ app.use(bodyParser.json());
 app.get('/hello', async function (req, res) {
         res.send("Hello Working Successfully")
 });
+app.get('/s', async function(req, res) {
+  const opt = await myinsta.url("https://www.instagram.com/p/CD4bXWPgWHd")
+  console.log(opt)
+  res.send(opt)
+})
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
     const { videourl } = req.body

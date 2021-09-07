@@ -19,5 +19,8 @@
     "fb-video-downloader": "^1.0.3",
     "insta_downloader": "^0.1.2",
     "ytdl-core": "^4.9.1"
+  },
+  "engines": {
+    "node": "v14.5.0"
   }
 }

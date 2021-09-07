@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 2121
 
 app.use(
     cors({
-        origin: ["http://localhost:3000"],
+        origin: ["http://localhost:3000","comewithus.epizy.com"],
         methods: ["GET", "POST"],
         credentials: true,
     })
@@ -22,11 +22,6 @@ app.use(bodyParser.json());
 app.get('/hello', async function (req, res) {
         res.send("Hello Working Successfully")
 });
-app.get('/s', async function(req, res) {
-  const opt = await myinsta.url("https://www.instagram.com/p/CD4bXWPgWHd")
-  console.log(opt)
-  res.send(opt)
-})
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
     const { videourl } = req.body

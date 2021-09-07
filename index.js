@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 2121
 
 app.use(
     cors({
-        origin: ["http://localhost:3000","comewithus.epizy.com"],
+        origin: ["http://localhost:3000","http://comewithus.epizy.com/"],
         methods: ["GET", "POST"],
         credentials: true,
     })

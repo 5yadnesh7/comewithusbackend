@@ -22,16 +22,6 @@ app.use(bodyParser.json());
 app.get('/hello', async function (req, res) {
         res.send("Hello Working Successfully")
 });
-app.get('/s', async function(req,res){
-    const data = await axios.get("https://www.instagram.com/p/CD4bXWPgWHd")
-    const resp = await data.data
-    const $ = cheerio.load(resp);
-    const videos = $('meta[property="og:video"]').attr("content")
-    console.log("videos")
-    console.log(videos)
-    res.send("videos")
-    res.send(videos)
-})
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
     const { videourl } = req.body

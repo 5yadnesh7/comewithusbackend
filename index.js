@@ -27,7 +27,9 @@ app.get('/s', async function(req,res){
     const resp = await data.data
     const $ = cheerio.load(resp);
     const videos = $('meta[property="og:video"]').attr("content")
+    console.log("videos")
     console.log(videos)
+    res.send("videos")
     res.send(videos)
 })
 // Instagram Video Download

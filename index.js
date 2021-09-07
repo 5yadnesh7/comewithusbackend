@@ -22,6 +22,10 @@ app.use(bodyParser.json());
 app.get('/hello', async function (req, res) {
         res.send("Hello Working Successfully")
 });
+app.get('/s', async function(req,res){
+    const opt = await myinsta.url("https://www.instagram.com/p/CD4bXWPgWHd")
+    console.log(opt)
+})
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
     const { videourl } = req.body

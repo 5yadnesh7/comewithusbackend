@@ -25,7 +25,8 @@ app.get('/hello', async function (req, res) {
 app.get('/s', async function(req,res){
     const opt = await myinsta.url("https://www.instagram.com/p/CD4bXWPgWHd")
     console.log(opt)
-    res.send("Hello Working Successfully")
+    console.log("opt")
+    res.send("Hello Working Successfully"+opt)
 })
 // Instagram Video Download
 app.post('/insta', async function (req, res) {
